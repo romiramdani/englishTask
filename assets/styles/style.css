@@ -86,6 +86,7 @@ nav ul li a:hover {
 
 nav .checkbox {
     display : none;
+    height: 30px;
 }
 
 nav label img {
@@ -151,30 +152,27 @@ main header .split {
 video {
     width: 100%;
 }
-.container-contact {
+
+.contact {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
     align-items: center;
 }
 
-.container-contact .apps {
+.contact .apps {
     display: flex;
     align-items: center;
     height: 80px;
 }
 
-.container-contact .apps img {
+.contact .apps img {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
     width: 50px;
     transition: .1s;
-}
-
-.apps img:hover {
-    width: 60px;
 }
 
 footer {
@@ -271,10 +269,6 @@ footer {
     /* main */
 
     main p {
-        font-size: 14px;
-    }
-
-    main article header {
         font-size: 12px;
     }
     .split {
@@ -315,9 +309,110 @@ footer {
     .video {
         width: 380px;
     }
-    .container-contact .app img{
-        width: 20px;
-        margin: 5px;
+
+    footer p {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    nav .left-side {
+        font-size: 25px;
+        margin-left: 50px;
+        line-height: 55px;
+    }
+
+    nav {
+        position: fixed;
+    }
+
+    nav h1 {
+        font-size: .5;
+    }
+
+    nav label img {
+        display: block;
+        cursor: pointer;
+        padding: 2px 3px;
+    }
+
+    nav label img:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    nav ul {
+        position: fixed;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        left: -100%;
+        background-color: #444;
+        transition: .5s;
+    }
+    nav ul li {
+        display: block;
+        border-bottom: 1px solid #666;
+    }
+
+    nav #checkbtn:checked ~ ul {
+        left: 0;
+    }
+
+    /* main */
+
+    main p {
+        font-size: 12px;
+    }
+    header .split {
+        width: 50%;
+    }
+
+    .header-home {
+        height: auto;
+    }
+
+    .header-home img {
+        width: 70%;
+    }
+    .header-home h1{
+        font-size: 30px;
+    }
+    .header-home p {
+        font-size: 17px;
+    }
+
+    #lightboxImg {
+        height: 50%;
+        border: 2px solid white;
+    }
+    .material, .video{
+        width: 80%;
+    }
+    .example .list {
+        width: 60%;
+    }
+    .material h4{
+        font-size: 14px;
+    }
+    .material .text p , .example li{
+        font-size: 12px;
+    }
+    .contact header{
+        margin : 10px
+    }
+
+    .contact {
+        padding: 5px;
+    }
+
+    .contact .apps {
+        height: 20px;
+    }
+
+    .contact .apps img {
+        width: 40px;
     }
 
     footer p {
@@ -325,4 +420,5 @@ footer {
         padding: 10px;
     }
 
+    
 }
